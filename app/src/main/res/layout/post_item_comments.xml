@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="5dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_img"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@color/colorPrimary"
+                app:civ_border_color="@color/fab_bg"
+                app:civ_border_width="5dp" />
+
+            <RelativeLayout
+                android:id="@+id/rel_general"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/profile_img"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/profile_img">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/comment_card_holder"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/btn_reply"
+                    app:cardBackgroundColor="@color/comment_item_background"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <RelativeLayout
+                            android:id="@+id/rel_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/full_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Loading..."
+                                android:textColor="@color/blue_grey_400"
+                                android:textSize="12sp" />
+
+
+                            <TextView
+                                android:id="@+id/date_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/full_name"
+                                android:text="Loading..."
+                                android:textColor="@color/blue_grey_400"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rel_1"
+                            android:layout_marginTop="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="2dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/comment_text"
+                                android:layout_alignBottom="@+id/comment_text"
+                                android:background="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/comment_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:text="Loading..."
+                                android:textColor="@color/blue_grey_200"
+                                android:textSize="10sp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <ImageButton
+                    android:id="@+id/btn_reply"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toLeftOf="@+id/btn_more"
+                    android:background="@drawable/ic_outline_reply_24px"
+                    android:backgroundTint="@color/colorPrimaryDark" />
+
+                <ImageButton
+                    android:id="@+id/btn_more"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/ic_outline_expand_more_24px"
+                    android:backgroundTint="@color/colorPrimary" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/comment_card_holder"
+                    android:visibility="gone">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_replies"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/comment_box"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/recycler_replies"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:visibility="gone"
+                        app:cardBackgroundColor="@color/comment_item_background"
+                        app:cardCornerRadius="29dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="3dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/profile_img_reply"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@color/colorPrimary"
+                                android:visibility="invisible"
+                                app:civ_border_color="@color/fab_bg"
+                                app:civ_border_width="3dp" />
+
+                            <EditText
+                                android:id="@+id/ed_comment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="20dp"
+                                android:layout_toLeftOf="@+id/btn_send_reply"
+                                android:layout_toEndOf="@+id/profile_img_reply"
+                                android:background="@android:color/transparent"
+                                android:hint="Type your reply..."
+                                android:textSize="14sp" />
+
+                            <ImageButton
+                                android:id="@+id/btn_send_reply"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/circular_bg"
+                                android:backgroundTint="@color/fab_bg"
+                                android:padding="7dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_outline_send_24px"
+                                android:tint="@color/colorPrimary" />
+
+                            <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+                                android:id="@+id/progress_sent_reply"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@+id/btn_send_reply"
+                                android:layout_alignTop="@+id/btn_send_reply"
+                                android:layout_alignEnd="@+id/btn_send_reply"
+                                android:layout_alignBottom="@+id/btn_send_reply"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:visibility="invisible" />
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

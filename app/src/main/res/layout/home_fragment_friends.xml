@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Home"
+    android:layout_marginBottom="56dp"
+    android:id="@+id/home_friends">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_bar"
+        app:liftOnScroll="true">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/AppThemeRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:elevation="2dp"
+            android:background="@color/colorPrimary">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="18dp"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:backgroundTint="@color/colorPrimaryDark">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/search_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_toRightOf="@+id/filter_container"
+                        android:background="@color/colorPrimaryDark"
+                        android:hint="Enter names"
+                        android:imeOptions="actionGo|actionSearch"
+                        android:inputType="textPersonName|text"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/search_card_bg"
+                        android:textSize="16sp" />
+                    <RelativeLayout
+                        android:id="@+id/filter_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/search_in_friends"
+                            style="@style/Widget.MaterialComponents.Chip.Entry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:chipIcon="@drawable/ic_outline_search_24px"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="2dp"
+                            android:backgroundTint="@color/fab_bg"
+                            android:textColor="@color/colorPrimaryDark"
+                            app:chipIconTint="@color/colorPrimaryDark"
+                            app:closeIconTint="@color/colorPrimaryDark"
+                            android:text="Search in Friends"
+                            app:iconStartPadding="5dp"
+                            app:closeIconEnabled="false"
+                            android:checkable="false"/>
+                    </RelativeLayout>
+
+
+
+                    <ImageButton
+                        android:id="@+id/btn_show_friend_request"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="3dp"
+                        android:background="@drawable/circular_bg"
+                        android:backgroundTint="@color/fab_bg"/>
+
+                    <TextView
+                        android:id="@+id/friend_request_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/btn_show_friend_request"
+                        android:layout_alignEnd="@+id/btn_show_friend_request"
+                        android:layout_alignRight="@+id/btn_show_friend_request"
+                        android:layout_centerInParent="true"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/friend_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar"
+        android:layoutAnimation="@anim/layout_animation_slide_bottom">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/crd_restart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="56dp"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="56dp">
+
+            <ImageView
+                android:id="@+id/img_restart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/img_restart_app" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_restart"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_restart"
+                android:layout_centerHorizontal="true"
+                android:text="Restart"
+                app:strokeColor="@color/colorPrimaryDark" />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ProgressBar
+        android:id="@+id/content_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

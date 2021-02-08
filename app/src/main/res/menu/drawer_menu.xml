@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/account_profile"
+            android:icon="@drawable/ic_outline_perm_contact_calendar_24px"
+            android:iconTint="@color/colorPrimary"
+            android:title="Time Frame" />
+
+        <item
+            android:id="@+id/saved"
+            android:icon="@drawable/ic_outline_assignment_turned_in_24px"
+            android:iconTint="@color/colorPrimary"
+            android:title="Saved" />
+
+        <item
+            android:id="@+id/pages"
+            android:icon="@drawable/ic_outline_turned_in_not_24px"
+            android:iconTint="@color/colorPrimary"
+            android:title="Pages" />
+
+        <item
+            android:id="@+id/groups"
+            android:icon="@drawable/ic_outline_flag_24px"
+            android:iconTint="@color/colorPrimary"
+            android:title="Groups" />
+
+        <item
+            android:id="@+id/recent_actions"
+            android:icon="@drawable/ic_outline_settings_backup_restore_24px"
+            android:iconTint="@color/colorPrimary"
+            android:title="Recent Actions" />
+
+        <item
+            android:id="@+id/nearby"
+            android:icon="@drawable/ic_outline_map_24px"
+            android:iconTint="@color/colorPrimary"
+            android:title="Nearby" />
+
+        <item
+            android:id="@+id/weather"
+            android:icon="@drawable/ic_outline_cloud_24px"
+            android:iconTint="@color/colorPrimary"
+            android:title="Weather" />
+
+
+    </group>
+    <item android:title="Support">
+        <menu>
+            <item
+                android:id="@+id/help_center"
+                android:icon="@drawable/ic_outline_help_outline_24px"
+                android:iconTint="@color/colorPrimary"
+                android:title="Help Center" />
+
+            <item
+                android:id="@+id/report"
+                android:icon="@drawable/ic_outline_markunread_24px"
+                android:iconTint="@color/colorPrimary"
+                android:title="Report" />
+
+            <item
+                android:id="@+id/privacy_policy"
+                android:icon="@drawable/ic_outline_info_24px"
+                android:iconTint="@color/colorPrimary"
+                android:title="Privacy Policy" />
+        </menu>
+    </item>
+    <item android:title="Preferences">
+        <menu>
+            <item
+                android:id="@+id/app_settings"
+                android:icon="@drawable/ic_outline_settings_24px"
+                android:iconTint="@color/colorPrimary"
+                android:title="App Settings" />
+
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/ic_outline_highlight_off_24px"
+                android:iconTint="@color/colorPrimary"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

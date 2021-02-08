@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2962ff</color>
+    <color name="colorPrimaryDark">#2151d3</color>
+    <color name="colorAccent">#fafafa</color>
+    <color name="textColorPrimary">#fafafa</color>
+    <color name="login_btn_stroke_color">#a6ffffff</color>
+    <color name="snackbar_light">#fafafa</color>
+    <color name="progress_dialog_bg">#fafafa</color>
+    <color name="white">#FAFAFA</color>
+    <color name="real_white">#ffffff</color>
+    <color name="fab_bg">#E3F2FD</color>
+    <color name="nav_light_bg">#EEEEEE</color>
+    <color name="status_bar_mid_trans">#32000000</color>
+    <color name="search_card_bg">#448AFF</color>
+    <color name="trans_white">#D5747474</color>
+    <color name="warn_1">#F57F17</color>
+    <color name="blue_grey_200">#B0BEC5</color>
+    <color name="blue_grey_400">#78909C</color>
+    <color name="blue_grey_900">#263238</color>
+    <color name="blue_grey_700">#455A64</color>
+
+    <color name="green_outlined">#00C853</color>
+    <color name="amber_outlined">#FF8F00</color>
+    <color name="purple_outline">#651FFF</color>
+    <color name="trans_black">#8C000000</color>
+
+    <color name="primary_light">#E3F2FD</color>
+
+    <color name="green_light">#B9F6CA</color>
+
+    <color name="amber_light">#FFD180</color>
+
+    <color name="purple_light">#EA80FC</color>
+    <color name="trans_primary">#7B303F9E</color>
+    <color name="trans_black_1">#67000000</color>
+    <color name="comment_item_background">#F4F4F4</color>
+</resources>

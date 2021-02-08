@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <HorizontalScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/real_white"
+        android:elevation="3dp"
+        android:scrollbarSize="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/header_photos"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/comment_item_background"
+                android:checkable="false"
+                android:text="Header Photos"
+                android:textColor="@color/colorPrimaryDark"
+                app:chipIcon="@drawable/ic_outline_panorama_24px"
+                app:chipIconTint="@color/colorPrimaryDark"
+                app:chipStartPadding="25dp"
+                app:closeIconEnabled="false"
+                app:closeIconTint="@color/colorPrimaryDark"
+                app:rippleColor="@android:color/transparent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/profile_images"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/header_photos"
+                android:backgroundTint="@color/comment_item_background"
+                android:checkable="false"
+                android:text="Profile Images"
+                android:textColor="@color/colorPrimaryDark"
+                app:chipIcon="@drawable/ic_outline_crop_original_24px"
+                app:chipIconTint="@color/colorPrimaryDark"
+                app:chipStartPadding="30dp"
+                app:closeIconEnabled="false"
+                app:closeIconTint="@color/colorPrimaryDark"
+                app:rippleColor="@android:color/transparent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/post_images"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/profile_images"
+                android:backgroundTint="@color/comment_item_background"
+                android:checkable="false"
+                android:text="Posts Images"
+                android:textColor="@color/colorPrimaryDark"
+                app:chipIcon="@drawable/ic_outline_view_carousel_24px"
+                app:chipIconTint="@color/colorPrimaryDark"
+                app:chipStartPadding="30dp"
+                app:closeIconEnabled="false"
+                app:closeIconTint="@color/colorPrimaryDark"
+                app:rippleColor="@android:color/transparent" />
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+
+    <com.etsy.android.grid.StaggeredGridView
+        android:id="@+id/grid_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scrollview"
+        android:layout_centerHorizontal="true"
+        android:choiceMode="multipleChoiceModal"
+        android:drawSelectorOnTop="true"
+        android:fastScrollEnabled="true"
+        app:column_count="2"
+        app:grid_paddingBottom="5dp"
+        app:grid_paddingLeft="5dp"
+        app:grid_paddingRight="5dp"
+        app:grid_paddingTop="5dp"
+        app:item_margin="7dp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
